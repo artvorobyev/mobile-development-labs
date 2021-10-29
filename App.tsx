@@ -6,6 +6,7 @@ import History from './screens/History/History';
 
 import { Provider } from 'react-redux';
 import { store } from './store';
+import { Calculator } from './screens/Calculator/Calculator';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name='Calculator' component={Calculator} />
           <Stack.Screen name='Home' component={Home} />
           <Stack.Screen name='History' component={History} />
         </Stack.Navigator>
